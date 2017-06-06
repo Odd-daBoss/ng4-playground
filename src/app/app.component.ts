@@ -5,13 +5,15 @@ import { Component } from '@angular/core';
   template:`
   <h1>Hello World!</h1>
 
-	<button [disabled]="buttonStatus">My Button</button>
+	<button (mouseleave)="myEvent($event)">My Button</button>
 
   `,
 })
 
 export class AppComponent {
 
-	buttonStatus = false;
+	myEvent(event) {
+		console.log(event);
+	}
 
 }
